@@ -5,7 +5,6 @@ Helpers
    letras = [['a' .. 'z'] + ['A' .. 'Z']];  
    sublinhado = '_'; 
    espaco = ' ';
-   quebralinha = ;
 
 Tokens
   meufim = 'fim';
@@ -32,11 +31,13 @@ Tokens
   meufim_repita = 'fim repita';
   espacoembranco = espaco ;
   meusnumeros = numeros+;
-  identificador= sublinhado?letras+|letras+|sublinhado;
-  meuquebralinha = quebralinha;
-
-
-   //simbolos aritmeticos
+  meuatribuicao = ':=';
+  meufim_linha = ';';
+  meu_parent_esq = '(';
+  meu_parent_dir = ')';
+  meu_colche_esq = '[';
+  meu_colche_dir = ']';
+  meudoispontos = ':';
   meusmais = '+' ;
   meusmenos = '-' ;
   meumultiplicacao = '*' ;
@@ -47,8 +48,8 @@ Tokens
   meumaiorigual = '>=';
   meuatribuicao = ':=';
   meuigual = '=';
+  identificador= sublinhado?letras+numeros?|sublinhado+numeros?letras?|letras+sublinhado?letras?;
   
   
 Ignored Tokens
   espacoembranco;
-  meuquebralinha;
