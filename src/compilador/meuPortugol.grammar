@@ -2,14 +2,18 @@ Package meuprojetoLFT; //  package name
 
 Helpers
    numeros = ['0' .. '9'];
-   letras = [['a' .. 'z'] + ['A' .. 'Z']];  
-   sublinhado = '_'; 
+   letras = [['a' .. 'z'] + ['A' .. 'Z']];
+   sublinhado = '_';
    espaco = ' ';
    tab = 9;
-   lf = 12;
    cr = 13;
+   lf = 10;
+   aspassimples = ''';
+   aspasduplas = '"';
+
 
 Tokens
+  meuprograma = 'programa';
   meufim = 'fim';
   ultimofim = 'fim.';
   meufaca = 'faca';
@@ -19,7 +23,6 @@ Tokens
   meurepita = 'repita';
   variavel = 'var';
   meuinicio = 'inicio';
-  meuprograma = 'programa';
   meutipo = 'tipo';
   meuregistro = 'registro';
   real= 'real';
@@ -32,7 +35,7 @@ Tokens
   meufim_para = 'fim para';
   meufim_enquanto = 'fim enquanto';
   meufim_repita = 'fim repita';
-  espacoembranco = espaco | cr | lf | tab ;
+  espacoembranco = espaco | cr lf | cr | lf | tab ;
   meusnumeros = numeros+;
   meuatribuicao = ':=';
   meufim_linha = ';';
