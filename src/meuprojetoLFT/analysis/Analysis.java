@@ -42,16 +42,17 @@ public interface Analysis extends Switch
     void caseTMeuColcheEsq(TMeuColcheEsq node);
     void caseTMeuColcheDir(TMeuColcheDir node);
     void caseTMeudoispontos(TMeudoispontos node);
-    void caseTMeumais(TMeumais node);
-    void caseTMeumenos(TMeumenos node);
+    void caseTMeusmais(TMeusmais node);
+    void caseTMeusmenos(TMeusmenos node);
     void caseTMeumultiplicacao(TMeumultiplicacao node);
-    void caseTMeudivisao(TMeudivisao node);
+    void caseTMeusdivisao(TMeusdivisao node);
     void caseTMeumenorque(TMeumenorque node);
     void caseTMeumenorigual(TMeumenorigual node);
     void caseTMeumaiorque(TMeumaiorque node);
     void caseTMeumaiorigual(TMeumaiorigual node);
+    void caseTAtribuicao(TAtribuicao node);
     void caseTMeuigual(TMeuigual node);
-    void caseTIdentificador(TIdentificador node);
+    void caseTMeuidentificador(TMeuidentificador node);
     void caseEOF(EOF node);
     void caseInvalidToken(InvalidToken node);
 }

@@ -255,13 +255,13 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeumais(TMeumais node)
+    public void caseTMeusmais(TMeusmais node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTMeumenos(TMeumenos node)
+    public void caseTMeusmenos(TMeusmenos node)
     {
         defaultCase(node);
     }
@@ -273,7 +273,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeudivisao(TMeudivisao node)
+    public void caseTMeusdivisao(TMeusdivisao node)
     {
         defaultCase(node);
     }
@@ -303,13 +303,19 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseTAtribuicao(TAtribuicao node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseTMeuigual(TMeuigual node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTIdentificador(TIdentificador node)
+    public void caseTMeuidentificador(TMeuidentificador node)
     {
         defaultCase(node);
     }

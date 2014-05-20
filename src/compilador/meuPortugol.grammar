@@ -5,6 +5,9 @@ Helpers
    letras = [['a' .. 'z'] + ['A' .. 'Z']];  
    sublinhado = '_'; 
    espaco = ' ';
+   tab = 9;
+   lf = 12;
+   cr = 13;
 
 Tokens
   meufim = 'fim';
@@ -29,7 +32,7 @@ Tokens
   meufim_para = 'fim para';
   meufim_enquanto = 'fim enquanto';
   meufim_repita = 'fim repita';
-  espacoembranco = espaco ;
+  espacoembranco = espaco | cr | lf | tab ;
   meusnumeros = numeros+;
   meuatribuicao = ':=';
   meufim_linha = ';';
@@ -46,9 +49,10 @@ Tokens
   meumenorigual = '<=';
   meumaiorque = '>';
   meumaiorigual = '>=';
-  meuatribuicao = ':=';
+  atribuicao = ':=';
   meuigual = '=';
-  identificador= sublinhado?letras+numeros?|sublinhado+numeros?letras?|letras+sublinhado?letras?;
+  meuidentificador = sublinhado(letras|numeros)* | letras(sublinhado|numeros)* | sublinhado(letras|numeros|sublinhado)* | letras(sublinhado|numeros|letras)*;
+  meucomentariosimples = '//' .. ';';
   
   
 Ignored Tokens

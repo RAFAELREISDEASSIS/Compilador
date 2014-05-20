@@ -5,16 +5,16 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TMeudivisao extends Token
+public final class TMeusmais extends Token
 {
-    public TMeudivisao()
+    public TMeusmais()
     {
-        super.setText("/");
+        super.setText("+");
     }
 
-    public TMeudivisao(int line, int pos)
+    public TMeusmais(int line, int pos)
     {
-        super.setText("/");
+        super.setText("+");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TMeudivisao extends Token
     @Override
     public Object clone()
     {
-      return new TMeudivisao(getLine(), getPos());
+      return new TMeusmais(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTMeudivisao(this);
+        ((Analysis) sw).caseTMeusmais(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TMeudivisao text.");
+        throw new RuntimeException("Cannot change TMeusmais text.");
     }
 }
