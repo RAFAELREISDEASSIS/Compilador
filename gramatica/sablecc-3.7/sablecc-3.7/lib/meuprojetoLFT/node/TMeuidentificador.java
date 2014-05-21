@@ -5,14 +5,14 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TIdentificador extends Token
+public final class TMeuidentificador extends Token
 {
-    public TIdentificador(String text)
+    public TMeuidentificador(String text)
     {
         setText(text);
     }
 
-    public TIdentificador(String text, int line, int pos)
+    public TMeuidentificador(String text, int line, int pos)
     {
         setText(text);
         setLine(line);
@@ -22,12 +22,12 @@ public final class TIdentificador extends Token
     @Override
     public Object clone()
     {
-      return new TIdentificador(getText(), getLine(), getPos());
+      return new TMeuidentificador(getText(), getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTIdentificador(this);
+        ((Analysis) sw).caseTMeuidentificador(this);
     }
 }

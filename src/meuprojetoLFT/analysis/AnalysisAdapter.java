@@ -69,6 +69,12 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseTMeuprograma(TMeuprograma node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseTMeufim(TMeufim node)
     {
         defaultCase(node);
@@ -118,12 +124,6 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTMeuinicio(TMeuinicio node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseTMeuprograma(TMeuprograma node)
     {
         defaultCase(node);
     }
@@ -316,6 +316,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTMeuidentificador(TMeuidentificador node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeucomentariosimples(TMeucomentariosimples node)
     {
         defaultCase(node);
     }

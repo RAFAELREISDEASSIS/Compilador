@@ -1,13 +1,20 @@
 Package meuprojetoLFT; //  package name
 
 Helpers
-   numeros = ['0' .. '9'] + ;
-   letras = [['a' .. 'z'] + ['A' .. 'Z']] +;  
-   sublinhado = '_' ; 
+   numeros = ['0' .. '9'];
+   letras = [['a' .. 'z'] + ['A' .. 'Z']];
+   sublinhado = '_';
    espaco = ' ';
-   intercalacao = (letras + numeros | numeros + letras) ;
+   tab = 9;
+   cr = 13;
+   lf = 10;
+   aspassimples = ''';
+   aspasduplas = '"';
+   comentariolinha = '//';
+
 
 Tokens
+  meuprograma = 'programa';
   meufim = 'fim';
   ultimofim = 'fim.';
   meufaca = 'faca';
@@ -17,7 +24,6 @@ Tokens
   meurepita = 'repita';
   variavel = 'var';
   meuinicio = 'inicio';
-  meuprograma = 'programa';
   meutipo = 'tipo';
   meuregistro = 'registro';
   real= 'real';
@@ -30,7 +36,7 @@ Tokens
   meufim_para = 'fim para';
   meufim_enquanto = 'fim enquanto';
   meufim_repita = 'fim repita';
-  espacoembranco = espaco ;
+  espacoembranco = espaco | cr lf | cr | lf | tab ;
   meusnumeros = numeros+;
   meuatribuicao = ':=';
   meufim_linha = ';';
@@ -39,19 +45,18 @@ Tokens
   meu_colche_esq = '[';
   meu_colche_dir = ']';
   meudoispontos = ':';
-  meumais = '+' ;
-  meumenos = '-' ;
+  meusmais = '+' ;
+  meusmenos = '-' ;
   meumultiplicacao = '*' ;
-  meudivisao = '/';
+  meusdivisao = '/';
   meumenorque = '<';
   meumenorigual = '<=';
   meumaiorque = '>';
   meumaiorigual = '>=';
+  atribuicao = ':=';
   meuigual = '=';
-  meucomentariosimples = '//' ;
-  identificador = sublinhado+|sublinhado+letras+numeros+|sublinhado+numeros+letras+|sublinhado+letras?numeros+|sublinhado+numeros+letras?|sublinhado+letras+numeros?|sublinhado?letras+numeros+|sublinhado?letras+numeros?|sublinhado?intercalacao+|sublinhado+intercalacao+|sublinhado+letras+numeros+sublinhado+|sublinhado+numeros+letras+sublinhado+|sublinhado+letras?numeros+sublinhado+|sublinhado+numeros+letras?sublinhado+|sublinhado+letras+numeros?sublinhado+|sublinhado?letras+numeros+sublinhado+|sublinhado?letras+numeros?sublinhado+|sublinhado?intercalacao+sublinhado+|sublinhado+intercalacao+sublinhado+;
-  
-  
+  meuidentificador = sublinhado(letras|numeros)* | letras(sublinhado|numeros)* | sublinhado(letras|numeros|sublinhado)* | letras(sublinhado|numeros|letras)*;
+  meucomentariosimples = comentariolinha(letras|numeros|sublinhado|espaco|aspassimples|aspasduplas)*;
+
 Ignored Tokens
   espacoembranco;
-  meucomentariosimples + jogar todo token aqui;

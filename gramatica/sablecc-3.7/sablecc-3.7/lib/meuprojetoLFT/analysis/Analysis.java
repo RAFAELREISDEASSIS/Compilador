@@ -11,6 +11,7 @@ public interface Analysis extends Switch
     Object getOut(Node node);
     void setOut(Node node, Object o);
 
+    void caseTMeuprograma(TMeuprograma node);
     void caseTMeufim(TMeufim node);
     void caseTUltimofim(TUltimofim node);
     void caseTMeufaca(TMeufaca node);
@@ -20,7 +21,6 @@ public interface Analysis extends Switch
     void caseTMeurepita(TMeurepita node);
     void caseTVariavel(TVariavel node);
     void caseTMeuinicio(TMeuinicio node);
-    void caseTMeuprograma(TMeuprograma node);
     void caseTMeutipo(TMeutipo node);
     void caseTMeuregistro(TMeuregistro node);
     void caseTReal(TReal node);
@@ -42,16 +42,18 @@ public interface Analysis extends Switch
     void caseTMeuColcheEsq(TMeuColcheEsq node);
     void caseTMeuColcheDir(TMeuColcheDir node);
     void caseTMeudoispontos(TMeudoispontos node);
-    void caseTMeumais(TMeumais node);
-    void caseTMeumenos(TMeumenos node);
+    void caseTMeusmais(TMeusmais node);
+    void caseTMeusmenos(TMeusmenos node);
     void caseTMeumultiplicacao(TMeumultiplicacao node);
-    void caseTMeudivisao(TMeudivisao node);
+    void caseTMeusdivisao(TMeusdivisao node);
     void caseTMeumenorque(TMeumenorque node);
     void caseTMeumenorigual(TMeumenorigual node);
     void caseTMeumaiorque(TMeumaiorque node);
     void caseTMeumaiorigual(TMeumaiorigual node);
+    void caseTAtribuicao(TAtribuicao node);
     void caseTMeuigual(TMeuigual node);
-    void caseTIdentificador(TIdentificador node);
+    void caseTMeuidentificador(TMeuidentificador node);
+    void caseTMeucomentariosimples(TMeucomentariosimples node);
     void caseEOF(EOF node);
     void caseInvalidToken(InvalidToken node);
 }
