@@ -1,12 +1,10 @@
-programa RafaelTaQuaseFera
-
-var
-inteiro Rafael; //PQ Matheus ta devagar
-
-Faco mais oq minha dupla
-
-se tiver_correto entao
-    Thetheu paga o lanche
-fim se
-
+programa RafaelTaQuaseFera /* htfufrsdg //yhubvcxvu
+inicio
 fim.
+
+*/kjudghfku
+
+*/jweydgkweyg
+*/
+
+var 

@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import meuprojetoLFT.lexer.Lexer;
 import meuprojetoLFT.lexer.LexerException;
 import meuprojetoLFT.node.EOF;
-import meuprojetoLFT.node.TEspacoembranco;
+import meuprojetoLFT.node.TMeuespacoembranco;
 import meuprojetoLFT.node.Token;
 
 public class Compilador {
@@ -32,7 +32,7 @@ public class Compilador {
                     if (!name.equals("EOF")) {
                         name=name.substring(1, name.length());
                     }
-                    if (!(t instanceof TEspacoembranco)){
+                    if (!(t instanceof TMeuespacoembranco)){
                         if (!name.equals("EOF")){
                         System.out.print(name);}
 //                        System.out.println("aqui");

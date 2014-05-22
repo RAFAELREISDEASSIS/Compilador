@@ -5,16 +5,16 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TMeuatribuicao extends Token
+public final class TMeuxor extends Token
 {
-    public TMeuatribuicao()
+    public TMeuxor()
     {
-        super.setText("<-");
+        super.setText("xor");
     }
 
-    public TMeuatribuicao(int line, int pos)
+    public TMeuxor(int line, int pos)
     {
-        super.setText("<-");
+        super.setText("xor");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TMeuatribuicao extends Token
     @Override
     public Object clone()
     {
-      return new TMeuatribuicao(getLine(), getPos());
+      return new TMeuxor(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTMeuatribuicao(this);
+        ((Analysis) sw).caseTMeuxor(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TMeuatribuicao text.");
+        throw new RuntimeException("Cannot change TMeuxor text.");
     }
 }

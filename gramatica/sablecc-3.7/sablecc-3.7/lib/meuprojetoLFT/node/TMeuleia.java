@@ -5,16 +5,16 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TVariavel extends Token
+public final class TMeuleia extends Token
 {
-    public TVariavel()
+    public TMeuleia()
     {
-        super.setText("var");
+        super.setText("leia");
     }
 
-    public TVariavel(int line, int pos)
+    public TMeuleia(int line, int pos)
     {
-        super.setText("var");
+        super.setText("leia");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TVariavel extends Token
     @Override
     public Object clone()
     {
-      return new TVariavel(getLine(), getPos());
+      return new TMeuleia(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTVariavel(this);
+        ((Analysis) sw).caseTMeuleia(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TVariavel text.");
+        throw new RuntimeException("Cannot change TMeuleia text.");
     }
 }

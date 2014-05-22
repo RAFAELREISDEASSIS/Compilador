@@ -5,16 +5,16 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TUltimofim extends Token
+public final class TMeude extends Token
 {
-    public TUltimofim()
+    public TMeude()
     {
-        super.setText("fim.");
+        super.setText("de");
     }
 
-    public TUltimofim(int line, int pos)
+    public TMeude(int line, int pos)
     {
-        super.setText("fim.");
+        super.setText("de");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TUltimofim extends Token
     @Override
     public Object clone()
     {
-      return new TUltimofim(getLine(), getPos());
+      return new TMeude(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTUltimofim(this);
+        ((Analysis) sw).caseTMeude(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TUltimofim text.");
+        throw new RuntimeException("Cannot change TMeude text.");
     }
 }

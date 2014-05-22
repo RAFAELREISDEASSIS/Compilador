@@ -75,19 +75,37 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseTMeuleia(TMeuleia node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuescreva(TMeuescreva node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseTMeufim(TMeufim node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTUltimofim(TUltimofim node)
+    public void caseTMeuultimofim(TMeuultimofim node)
     {
         defaultCase(node);
     }
 
     @Override
     public void caseTMeufaca(TMeufaca node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeude(TMeude node)
     {
         defaultCase(node);
     }
@@ -105,6 +123,12 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseTMeupasso(TMeupasso node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseTMeupara(TMeupara node)
     {
         defaultCase(node);
@@ -117,7 +141,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTVariavel(TVariavel node)
+    public void caseTMeuvariavel(TMeuvariavel node)
     {
         defaultCase(node);
     }
@@ -141,25 +165,31 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTReal(TReal node)
+    public void caseTMeureal(TMeureal node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTInteiro(TInteiro node)
+    public void caseTMeuinteiro(TMeuinteiro node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTCaractere(TCaractere node)
+    public void caseTMeucaractere(TMeucaractere node)
     {
         defaultCase(node);
     }
 
     @Override
     public void caseTMeuse(TMeuse node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuentao(TMeuentao node)
     {
         defaultCase(node);
     }
@@ -172,6 +202,18 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTMeucaso(TMeucaso node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuavalie(TMeuavalie node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeufimavalie(TMeufimavalie node)
     {
         defaultCase(node);
     }
@@ -201,7 +243,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTEspacoembranco(TEspacoembranco node)
+    public void caseTMeuespacoembranco(TMeuespacoembranco node)
     {
         defaultCase(node);
     }
@@ -249,7 +291,13 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeudoispontos(TMeudoispontos node)
+    public void caseTMeuvirgula(TMeuvirgula node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeupontos(TMeupontos node)
     {
         defaultCase(node);
     }
@@ -303,13 +351,37 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTAtribuicao(TAtribuicao node)
+    public void caseTMeuigual(TMeuigual node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTMeuigual(TMeuigual node)
+    public void caseTMeunao(TMeunao node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeue(TMeue node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuou(TMeuou node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuxor(TMeuxor node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuconstante(TMeuconstante node)
     {
         defaultCase(node);
     }
@@ -322,6 +394,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTMeucomentariosimples(TMeucomentariosimples node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeucomentariobloco(TMeucomentariobloco node)
     {
         defaultCase(node);
     }

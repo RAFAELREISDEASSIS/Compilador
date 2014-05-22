@@ -9,12 +9,12 @@ public final class TMeuatribuicao extends Token
 {
     public TMeuatribuicao()
     {
-        super.setText(":=");
+        super.setText("<-");
     }
 
     public TMeuatribuicao(int line, int pos)
     {
-        super.setText(":=");
+        super.setText("<-");
         setLine(line);
         setPos(pos);
     }
