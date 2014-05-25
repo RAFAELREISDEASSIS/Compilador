@@ -12,7 +12,10 @@ import meuprojetoLFT.lexer.LexerException;
 import meuprojetoLFT.node.EOF;
 import meuprojetoLFT.node.TMeuespacoembranco;
 import meuprojetoLFT.node.Token;
-
+/**
+ *
+ * @author Matheus Costa e Rafael Reis
+ */
 public class Compilador {
     /**
      * @param args the command line arguments
