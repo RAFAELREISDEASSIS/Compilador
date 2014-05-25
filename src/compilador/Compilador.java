@@ -20,27 +20,27 @@ public class Compilador {
      */
     public static void main(String[] args) throws LexerException, IOException {
         // TODO code application logic here
-        Reader r;
+        Reader myreader;
         try {
             for (int i = 0; i < args.length; i++) {
                 System.out.println(" O Arquivo testado é: '" + args[i] + "'\n");
-                r = new FileReader(args[i]);
-                Lexer l = new Lexer(new PushbackReader(r));
+                myreader = new FileReader(args[i]);
+                Lexer mylexer = new Lexer(new PushbackReader(myreader));
                 while (true) {
-                    Token t = l.next();
-                    String name = t.getClass().getSimpleName();
+                    Token token = mylexer.next();
+                    String name = token.getClass().getSimpleName();
                     if (!name.equals("EOF")) {
                         name=name.substring(1, name.length());
                     }
-                    if (!(t instanceof TMeuespacoembranco)){
+                    if (!(token instanceof TMeuespacoembranco)){
                         if (!name.equals("EOF")){
                         System.out.print(name);}
 //                        System.out.println("aqui");
                     }else{
 //                        System.out.println("aqui2");
-                        System.out.print(t.getText());
+                        System.out.print(token.getText());
                     }
-                    if(t instanceof EOF)
+                    if(token instanceof EOF)
                         break;     
                 }
                 System.out.println("\n|o||o||o|o|o|\n");
