@@ -1,6 +1,7 @@
 Package meuprojetoLFT; //  package name
 
 Helpers
+   tudo = [0 .. 0xffff];
    numeros = ['0' .. '9'];
    letras = [['a' .. 'z'] + ['A' .. 'Z']];
    sublinhado = '_';
@@ -16,7 +17,7 @@ Helpers
    comentariobloco_dir = '*/';
 
 States
-  normal;
+  normal,
   comentario;
 
 Tokens
@@ -75,9 +76,13 @@ Tokens
   {normal}minhaaspassimples = ''';
   {normal}meuespacoembranco = espaco | cr lf | cr | lf | tab ;
   {normal}meuidentificador= sublinhado(letras|numeros)* | letras(sublinhado|numeros)* | sublinhado(letras|numeros|sublinhado)* | letras(sublinhado|numeros|letras)*;
-  {normal}meucomentariosimples = '//' (ascii | letras | numeros | sublinhado | espaco | aspassimples | aspasduplas)*;
-  
-  meucomentariobloco = comentariobloco_esq (ascii | tab | ff | lf | cr | cr lf )* comentariobloco_dir;
+  {normal}meucomentariosimples = '//' (ascii | letras | numeros | sublinhado | espaco | '.' )*;
+  {normal->comentario, comentario}
+             comentario = '/*';
+  {comentario}comentario_fim = '*/';
+  {comentario}comentario_corpo = [tudo - ['*' + '/']]*;
+  {comentario}barra = '/';
+  {comentario}estrela = '*';
 
 Ignored Tokens
   meuespacoembranco;

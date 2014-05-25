@@ -14,7 +14,6 @@ import meuprojetoLFT.node.TMeuespacoembranco;
 import meuprojetoLFT.node.Token;
 
 public class Compilador {
-
     /**
      * @param args the command line arguments
      */
@@ -25,7 +24,7 @@ public class Compilador {
             for (int i = 0; i < args.length; i++) {
                 System.out.println(" O Arquivo testado é: '" + args[i] + "'\n");
                 myreader = new FileReader(args[i]);
-                Lexer mylexer = new Lexer(new PushbackReader(myreader));
+                Lexer mylexer = new MyLexer (new PushbackReader(myreader));
                 while (true) {
                     Token token = mylexer.next();
                     String name = token.getClass().getSimpleName();

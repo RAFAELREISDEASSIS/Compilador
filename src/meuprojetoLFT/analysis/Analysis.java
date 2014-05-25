@@ -40,7 +40,6 @@ public interface Analysis extends Switch
     void caseTMeufimPara(TMeufimPara node);
     void caseTMeufimEnquanto(TMeufimEnquanto node);
     void caseTMeufimRepita(TMeufimRepita node);
-    void caseTMeuespacoembranco(TMeuespacoembranco node);
     void caseTMeusnumeros(TMeusnumeros node);
     void caseTMeuatribuicao(TMeuatribuicao node);
     void caseTMeufimLinha(TMeufimLinha node);
@@ -64,9 +63,15 @@ public interface Analysis extends Switch
     void caseTMeuou(TMeuou node);
     void caseTMeuxor(TMeuxor node);
     void caseTMeuconstante(TMeuconstante node);
+    void caseTMinhaaspassimples(TMinhaaspassimples node);
+    void caseTMeuespacoembranco(TMeuespacoembranco node);
     void caseTMeuidentificador(TMeuidentificador node);
     void caseTMeucomentariosimples(TMeucomentariosimples node);
-    void caseTMeucomentariobloco(TMeucomentariobloco node);
+    void caseTComentario(TComentario node);
+    void caseTComentarioFim(TComentarioFim node);
+    void caseTComentarioCorpo(TComentarioCorpo node);
+    void caseTBarra(TBarra node);
+    void caseTEstrela(TEstrela node);
     void caseEOF(EOF node);
     void caseInvalidToken(InvalidToken node);
 }

@@ -243,12 +243,6 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeuespacoembranco(TMeuespacoembranco node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
     public void caseTMeusnumeros(TMeusnumeros node)
     {
         defaultCase(node);
@@ -387,6 +381,18 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseTMinhaaspassimples(TMinhaaspassimples node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTMeuespacoembranco(TMeuespacoembranco node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseTMeuidentificador(TMeuidentificador node)
     {
         defaultCase(node);
@@ -399,7 +405,31 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeucomentariobloco(TMeucomentariobloco node)
+    public void caseTComentario(TComentario node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComentarioFim(TComentarioFim node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComentarioCorpo(TComentarioCorpo node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTBarra(TBarra node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTEstrela(TEstrela node)
     {
         defaultCase(node);
     }
