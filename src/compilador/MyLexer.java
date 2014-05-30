@@ -7,6 +7,8 @@
 package compilador;
 
 import meuprojetoLFT.lexer.Lexer;
+import meuprojetoLFT.lexer.LexerException;
+import meuprojetoLFT.node.EOF;
 import meuprojetoLFT.node.TComentarioBloco;
 import meuprojetoLFT.node.TComentarioFim;
 
@@ -23,7 +25,7 @@ public class MyLexer extends Lexer{
   { super(in);
   }
   // We define a filter that recognizes nested comments.
-  protected void filter()
+  protected void filter() throws LexerException
   { // if we are in the comment state
     if(state.equals(State.COMENTARIO))
     { // if we are just entering this state
@@ -40,8 +42,12 @@ public class MyLexer extends Lexer{
         text.append(token.getText()); // accumulate the text.
         if(token instanceof TComentarioBloco)
           count++;
-        else if(token instanceof TComentarioFim)
+        else if(token instanceof TComentarioFim){
           count--;
+        }
+        if(token instanceof EOF){
+        throw new LexerException(null,"Ops ! Comentario bloco desbalanceado.");
+        }
         if(count != 0)
           token = null; // continue to scan the input.
         else
