@@ -399,7 +399,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTMeucomentariosimples(TMeucomentariosimples node)
+    public void caseTMeucomentarioLinha(TMeucomentarioLinha node)
     {
         defaultCase(node);
     }

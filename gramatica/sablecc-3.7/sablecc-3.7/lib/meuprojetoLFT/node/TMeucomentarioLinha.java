@@ -5,14 +5,14 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TMeucomentariosimples extends Token
+public final class TMeucomentarioLinha extends Token
 {
-    public TMeucomentariosimples(String text)
+    public TMeucomentarioLinha(String text)
     {
         setText(text);
     }
 
-    public TMeucomentariosimples(String text, int line, int pos)
+    public TMeucomentarioLinha(String text, int line, int pos)
     {
         setText(text);
         setLine(line);
@@ -22,12 +22,12 @@ public final class TMeucomentariosimples extends Token
     @Override
     public Object clone()
     {
-      return new TMeucomentariosimples(getText(), getLine(), getPos());
+      return new TMeucomentarioLinha(getText(), getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTMeucomentariosimples(this);
+        ((Analysis) sw).caseTMeucomentarioLinha(this);
     }
 }
