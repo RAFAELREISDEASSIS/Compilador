@@ -67,7 +67,7 @@ public interface Analysis extends Switch
     void caseTMeuespacoembranco(TMeuespacoembranco node);
     void caseTMeuidentificador(TMeuidentificador node);
     void caseTMeucomentarioLinha(TMeucomentarioLinha node);
-    void caseTComentario(TComentario node);
+    void caseTComentarioBloco(TComentarioBloco node);
     void caseTComentarioFim(TComentarioFim node);
     void caseTComentarioCorpo(TComentarioCorpo node);
     void caseTBarra(TBarra node);

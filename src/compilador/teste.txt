@@ -1,5 +1,6 @@
 programa MeuPrograma    
 inicio
+fim se
 // escreva ' Matheus e Rafael sao lindos' ! fim.
 /*
 se fim.
@@ -7,5 +8,4 @@ se fim.
 // escreva
 /*
 fim se */
-
 fim.

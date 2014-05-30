@@ -78,7 +78,7 @@ Tokens
   {normal}meuidentificador= sublinhado(letras|numeros)* | letras(sublinhado|numeros)* | sublinhado(letras|numeros|sublinhado)* | letras(sublinhado|numeros|letras)*;
   {normal}meucomentario_linha = '//' (ascii | letras | numeros | sublinhado | espaco | '.' )*;
   {normal->comentario, comentario}
-             comentario = '/*';
+             comentario_bloco = '/*';
   {comentario}comentario_fim = '*/';
   {comentario}comentario_corpo = [tudo - ['*' + '/']]*;
   {comentario}barra = '/';
