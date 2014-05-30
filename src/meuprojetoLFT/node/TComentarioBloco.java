@@ -5,14 +5,14 @@ package meuprojetoLFT.node;
 import meuprojetoLFT.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TComentario extends Token
+public final class TComentarioBloco extends Token
 {
-    public TComentario()
+    public TComentarioBloco()
     {
         super.setText("/*");
     }
 
-    public TComentario(int line, int pos)
+    public TComentarioBloco(int line, int pos)
     {
         super.setText("/*");
         setLine(line);
@@ -22,18 +22,18 @@ public final class TComentario extends Token
     @Override
     public Object clone()
     {
-      return new TComentario(getLine(), getPos());
+      return new TComentarioBloco(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTComentario(this);
+        ((Analysis) sw).caseTComentarioBloco(this);
     }
 
 //    @Override
 //    public void setText(@SuppressWarnings("unused") String text)
 //    {
-//        throw new RuntimeException("Cannot change TComentario text.");
+//        throw new RuntimeException("Cannot change TComentarioBloco text.");
 //    }
 }

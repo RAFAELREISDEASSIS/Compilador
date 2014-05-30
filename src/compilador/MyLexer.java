@@ -7,7 +7,7 @@
 package compilador;
 
 import meuprojetoLFT.lexer.Lexer;
-import meuprojetoLFT.node.TComentario;
+import meuprojetoLFT.node.TComentarioBloco;
 import meuprojetoLFT.node.TComentarioFim;
 
 /**
@@ -16,7 +16,7 @@ import meuprojetoLFT.node.TComentarioFim;
  */
 public class MyLexer extends Lexer{
      private int count;
-  private TComentario comment;
+  private TComentarioBloco comment;
   private StringBuffer text;
   // We define a constructor
   public MyLexer(java.io.PushbackReader in)
@@ -30,7 +30,7 @@ public class MyLexer extends Lexer{
       if(comment == null)
       { // The token is supposed to be a comment.
         // We keep a reference to it and set the count to one
-        comment = (TComentario) token;
+        comment = (TComentarioBloco) token;
         text = new StringBuffer(comment.getText());
         count = 1;
         token = null; // continue to scan the input.
@@ -38,7 +38,7 @@ public class MyLexer extends Lexer{
       else
       { // we were already in the comment state
         text.append(token.getText()); // accumulate the text.
-        if(token instanceof TComentario)
+        if(token instanceof TComentarioBloco)
           count++;
         else if(token instanceof TComentarioFim)
           count--;
