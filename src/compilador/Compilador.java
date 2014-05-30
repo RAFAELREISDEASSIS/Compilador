@@ -42,6 +42,7 @@ public class Compilador {
 //                        System.out.println("aqui2");
                         System.out.print(token.getText());
                     }
+                    
                     if(token instanceof EOF)
                         break;     
                 }

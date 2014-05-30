@@ -1,11 +1,7 @@
-programa MeuPrograma    
-inicio
-// escreva ' Matheus e Rafael sao lindos' ! fim.
-/*
-se fim.
-*/
-// escreva
-/*
-fim se */
+Programa Meu_Programa 
+/* se fim
 
-fim.
+// escreva
+/* 
+fim se */ */
+
