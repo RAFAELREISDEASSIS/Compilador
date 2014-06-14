@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package compilador;
+package Lexer;
 
 import meuprojetoLFT.lexer.Lexer;
 import meuprojetoLFT.lexer.LexerException;

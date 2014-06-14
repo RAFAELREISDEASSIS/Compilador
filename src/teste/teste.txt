@@ -1,0 +1,49 @@
+<<<<<<< HEAD:src/compilador/teste.txt
+<<<<<<< HEAD
+Programa Meu_Programa 
+/* se fim
+
+// escreva
+/* 
+fim se */ */
+
+=======
+programa MeuPrograma    
+inicio
+fim se
+// escreva ' Matheus e Rafael sao lindos' ! fim.
+/*
+se fim.
+*/
+// escreva
+/*
+fim se */
+fim.
+>>>>>>> b3e57212f0f61cbfe1ba6aed691abd01361f99af
+/* */
+
+//                matheus
+=======
+<<<<<<< HEAD
+Programa Meu_Programa 
+/* se fim
+
+// escreva
+/* 
+fim se */ */
+
+=======
+programa MeuPrograma    
+inicio
+fim se
+// escreva ' Matheus e Rafael sao lindos' ! fim.
+/*
+se fim.
+*/
+// escreva
+/*
+fim se */
+fim.
+>>>>>>> b3e57212f0f61cbfe1ba6aed691abd01361f99af
+/* */
+>>>>>>> 7550e9cca45c1273351837133d00b64189a6675c:src/teste/teste.txt
